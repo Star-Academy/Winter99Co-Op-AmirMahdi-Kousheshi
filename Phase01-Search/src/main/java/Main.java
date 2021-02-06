@@ -7,19 +7,6 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-//        while (!scanner.nextLine().equals("3")){
-//            System.out.println("1. Add document");
-//            System.out.println("2. Search");
-//            System.out.println("3. Exit");
-//            String input=scanner.nextLine();
-//            if(input.equals("1")){
-//
-//            }else if(input.equals("2")){
-//
-//            }else{
-//                System.out.println("Invalid Command");
-//            }
-//        }
         FileReader fileReader = new FileReader("C:/Users/Amkam/Desktop/Folder");
         invertedIndex = new InvertedIndex();
         for (File allFile : fileReader.getAllFiles()) {

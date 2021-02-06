@@ -10,7 +10,9 @@ public class InvertedIndex {
 
     public void addWord(String word, String docID) {
         if (wordLocations.containsKey(word.toLowerCase())) {
-            wordLocations.get(word.toLowerCase()).add(docID);
+            if (!wordLocations.get(word.toLowerCase()).contains(docID)) {
+                wordLocations.get(word.toLowerCase()).add(docID);
+            }
         } else {
             ArrayList<String> locations = new ArrayList<>();
             locations.add(docID);
