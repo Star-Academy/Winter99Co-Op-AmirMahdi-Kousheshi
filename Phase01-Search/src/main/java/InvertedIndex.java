@@ -9,18 +9,18 @@ public class InvertedIndex {
     }
 
     public void addWord(String word, String docID) {
-        if (wordLocations.containsKey(word)) {
-            wordLocations.get(word).add(docID);
+        if (wordLocations.containsKey(word.toLowerCase())) {
+            wordLocations.get(word.toLowerCase()).add(docID);
         } else {
             ArrayList<String> locations = new ArrayList<>();
             locations.add(docID);
-            wordLocations.put(word, locations);
+            wordLocations.put(word.toLowerCase(), locations);
         }
     }
 
     public ArrayList<String> search(String word) {
-        if (wordLocations.containsKey(word)) {
-            return wordLocations.get(word);
+        if (wordLocations.containsKey(word.toLowerCase())) {
+            return wordLocations.get(word.toLowerCase());
         }
         return null;
     }

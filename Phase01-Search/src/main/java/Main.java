@@ -30,13 +30,16 @@ public class Main {
             }
         }
 
-        System.out.println("What is your search word?");
-        String searchWord = scanner.nextLine();
-        if (invertedIndex.search(searchWord) != null) {
-            System.out.println(invertedIndex.search(searchWord).toString());
-        } else {
-            System.out.println("Not Found");
+        while (true) {
+            System.out.println("What is your search word?");
+            String searchWord = scanner.nextLine();
+            if (invertedIndex.search(searchWord) != null) {
+                System.out.println(invertedIndex.search(searchWord).toString());
+            } else {
+                System.out.println("Not Found");
+            }
         }
+
 
     }
 
