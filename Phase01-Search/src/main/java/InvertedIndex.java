@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
 public class InvertedIndex {
@@ -9,7 +10,7 @@ public class InvertedIndex {
     }
 
     public void addWord(String word, String docID) {
-        String normalizeWord=normalize(word);
+        String normalizeWord = normalize(word);
         if (wordLocations.containsKey(normalizeWord.toLowerCase())) {
             if (!wordLocations.get(normalizeWord.toLowerCase()).contains(docID)) {
                 wordLocations.get(normalizeWord.toLowerCase()).add(docID);
@@ -22,13 +23,14 @@ public class InvertedIndex {
     }
 
     public ArrayList<String> search(String word) {
+        ArrayList<String> docIDs = new ArrayList<>();
         if (wordLocations.containsKey(word.toLowerCase())) {
-            return wordLocations.get(word.toLowerCase());
+            docIDs.addAll(wordLocations.get(word.toLowerCase()));
         }
-        return null;
+        return docIDs;
     }
 
-    private String normalize(String word){
-        return word.replaceAll("[(_)'\"\\.]","");
+    private String normalize(String word) {
+        return word.replaceAll("\\W+", "");
     }
 }

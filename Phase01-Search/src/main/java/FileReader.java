@@ -3,13 +3,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class FileReader {
-    String path;
-    File folder ;
+    String path = "C:/Users/Amkam/Desktop/Folder";
+    File folder = new File(path);
     public ArrayList<File> allFiles = new ArrayList<>();
 
-    public FileReader(String path) {
-        folder=new File(path);
-//        this.path = path;
+    public FileReader() {
         Collections.addAll(allFiles, folder.listFiles());
     }
 
