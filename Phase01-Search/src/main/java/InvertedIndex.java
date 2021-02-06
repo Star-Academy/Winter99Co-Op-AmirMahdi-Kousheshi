@@ -9,14 +9,15 @@ public class InvertedIndex {
     }
 
     public void addWord(String word, String docID) {
-        if (wordLocations.containsKey(word.toLowerCase())) {
-            if (!wordLocations.get(word.toLowerCase()).contains(docID)) {
-                wordLocations.get(word.toLowerCase()).add(docID);
+        String normalizeWord=normalize(word);
+        if (wordLocations.containsKey(normalizeWord.toLowerCase())) {
+            if (!wordLocations.get(normalizeWord.toLowerCase()).contains(docID)) {
+                wordLocations.get(normalizeWord.toLowerCase()).add(docID);
             }
         } else {
             ArrayList<String> locations = new ArrayList<>();
             locations.add(docID);
-            wordLocations.put(word.toLowerCase(), locations);
+            wordLocations.put(normalizeWord.toLowerCase(), locations);
         }
     }
 
@@ -25,5 +26,9 @@ public class InvertedIndex {
             return wordLocations.get(word.toLowerCase());
         }
         return null;
+    }
+
+    private String normalize(String word){
+        return word.replaceAll("[(_)'\"\\.]","");
     }
 }
