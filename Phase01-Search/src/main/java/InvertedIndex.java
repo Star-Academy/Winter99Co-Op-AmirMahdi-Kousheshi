@@ -1,6 +1,5 @@
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 
 public class InvertedIndex {
@@ -33,8 +32,8 @@ public class InvertedIndex {
         ArrayList<String> plusSignWords = new ArrayList<>(findPlusWords(splitInput));
         ArrayList<String> minusSignWords = new ArrayList<>(findMinusWords(splitInput));
         ArrayList<String> noSignWordsFinalDocIDs = new ArrayList<>(checkSubscriptionForNoSignWords(noSignWords));
-        ArrayList<String> plusSignWordsFinalDocIDs = new ArrayList<>(checkSubscriptionForPlusSignWords(plusSignWords));
-        ArrayList<String> minusSignWordsFinalDocIDs = new ArrayList<>(checkSubscriptionForMinusSignWords(minusSignWords));
+        ArrayList<String> plusSignWordsFinalDocIDs = new ArrayList<>(checkSubscriptionForSignWords(plusSignWords));
+        ArrayList<String> minusSignWordsFinalDocIDs = new ArrayList<>(checkSubscriptionForSignWords(minusSignWords));
         return finalCheck(noSignWordsFinalDocIDs, plusSignWordsFinalDocIDs, minusSignWordsFinalDocIDs);
     }
 
@@ -76,6 +75,17 @@ public class InvertedIndex {
                 break;
             }
         }
+        checker.clear();
+        HashMap<String, Boolean> hashMap = subscriptionOfNoSignWords(checker, noSignWords);
+        for (String s : hashMap.keySet()) {
+            if (hashMap.get(s)) {
+                checker.add(s);
+            }
+        }
+        return checker;
+    }
+
+    private HashMap<String, Boolean> subscriptionOfNoSignWords(ArrayList<String> checker, ArrayList<String> noSignWords) {
         HashMap<String, Boolean> hashMap = new HashMap<>();
         for (String s : checker) {
             hashMap.put(s, false);
@@ -87,26 +97,12 @@ public class InvertedIndex {
                 }
             }
         }
-        checker.clear();
-        for (String s : hashMap.keySet()) {
-            if (hashMap.get(s)) {
-                checker.add(s);
-            }
-        }
-        return checker;
+        return hashMap;
     }
 
-    private ArrayList<String> checkSubscriptionForPlusSignWords(ArrayList<String> plusSignWords) {
+    private ArrayList<String> checkSubscriptionForSignWords(ArrayList<String> SignWords) {
         ArrayList<String> checker = new ArrayList<>();
-        for (String plusSignWord : plusSignWords) {
-            checker.addAll(findDoc(plusSignWord));
-        }
-        return checker;
-    }
-
-    private ArrayList<String> checkSubscriptionForMinusSignWords(ArrayList<String> minusSignWords) {
-        ArrayList<String> checker = new ArrayList<>();
-        for (String minusSignWord : minusSignWords) {
+        for (String minusSignWord : SignWords) {
             checker.addAll(findDoc(minusSignWord));
         }
         return checker;
