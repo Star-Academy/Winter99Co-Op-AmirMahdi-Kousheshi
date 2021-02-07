@@ -115,10 +115,12 @@ public class InvertedIndex {
     private ArrayList<String> finalCheck(ArrayList<String> noSignWordsDocs, ArrayList<String> plusSignWordsDocs, ArrayList<String> minusSignWordsDocs) {
         ArrayList<String> finalDocs = new ArrayList<>();
         if (noSignWordsDocs.size() == 0 && plusSignWordsDocs.size() == 0) {
-            for (File allFile : FileReader.getAllFiles()) {
-                finalDocs.add(allFile.getName());
+            if (minusSignWordsDocs.size() != 0) {
+                for (File allFile : FileReader.getAllFiles()) {
+                    finalDocs.add(allFile.getName());
+                }
+                finalDocs.removeAll(minusSignWordsDocs);
             }
-            finalDocs.removeAll(minusSignWordsDocs);
             return finalDocs;
         } else {
             if (noSignWordsDocs.size() == 0) {
