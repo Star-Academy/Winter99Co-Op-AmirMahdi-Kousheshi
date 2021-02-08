@@ -75,8 +75,8 @@ public class InvertedIndex {
                 break;
             }
         }
-        checker.clear();
         HashMap<String, Boolean> hashMap = subscriptionOfNoSignWords(checker, noSignWords);
+        checker.clear();
         for (String s : hashMap.keySet()) {
             if (hashMap.get(s)) {
                 checker.add(s);
