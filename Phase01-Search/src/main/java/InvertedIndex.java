@@ -2,7 +2,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class InvertedIndex {
+public class InvertedIndex implements StringSeparation, InvertedIndexAbility {
     public static HashMap<String, ArrayList<String>> wordLocations = new HashMap<>();
 
     public InvertedIndex() {
@@ -22,7 +22,7 @@ public class InvertedIndex {
         }
     }
 
-    private String normalize(String word) {
+    public String normalize(String word) {
         return word.replaceAll("\\W+", "");
     }
 
@@ -37,7 +37,7 @@ public class InvertedIndex {
         return finalCheck(noSignWordsFinalDocIDs, plusSignWordsFinalDocIDs, minusSignWordsFinalDocIDs);
     }
 
-    private ArrayList<String> findNothingWords(String[] splitInput) {
+    public ArrayList<String> findNothingWords(String[] splitInput) {
         ArrayList<String> strings = new ArrayList<>();
         for (String word : splitInput) {
             if (!word.startsWith("+") || !word.startsWith("-")) {
@@ -47,7 +47,7 @@ public class InvertedIndex {
         return strings;
     }
 
-    private ArrayList<String> findPlusWords(String[] splitInput) {
+    public ArrayList<String> findPlusWords(String[] splitInput) {
         ArrayList<String> strings = new ArrayList<>();
         for (String word : splitInput) {
             if (word.startsWith("+")) {
@@ -57,7 +57,7 @@ public class InvertedIndex {
         return strings;
     }
 
-    private ArrayList<String> findMinusWords(String[] splitInput) {
+    public ArrayList<String> findMinusWords(String[] splitInput) {
         ArrayList<String> strings = new ArrayList<>();
         for (String word : splitInput) {
             if (word.startsWith("-")) {
@@ -151,7 +151,7 @@ public class InvertedIndex {
         return finalDocs;
     }
 
-    private ArrayList<String> findDoc(String word) {
+    public ArrayList<String> findDoc(String word) {
         ArrayList<String> docIDs = new ArrayList<>();
         if (wordLocations.containsKey(word.toLowerCase())) {
             docIDs.addAll(wordLocations.get(word.toLowerCase()));

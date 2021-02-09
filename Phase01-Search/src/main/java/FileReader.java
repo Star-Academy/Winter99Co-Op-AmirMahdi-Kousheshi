@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class FileReader {
+public class FileReader implements FileSaving {
     static String path = "C:/Users/Amkam/Desktop/Folder";
     static File folder = new File(path);
     public static ArrayList<File> allFiles = new ArrayList<>();
