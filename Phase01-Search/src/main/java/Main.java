@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
 public class Main {
-    private static InvertedIndex invertedIndex;
+    private static HashInvertedIndex invertedIndex;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        invertedIndex = new InvertedIndex();
+        invertedIndex = new HashInvertedIndex();
         FileReader.addAllFiles(invertedIndex);
 
         while (true) {

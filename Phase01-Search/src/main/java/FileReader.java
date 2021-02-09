@@ -9,7 +9,7 @@ public class FileReader implements FileSaving {
     static File folder = new File(path);
     public static ArrayList<File> allFiles = new ArrayList<>();
 
-    public static void addAllFiles(InvertedIndex invertedIndex) {
+    public static void addAllFiles(HashInvertedIndex invertedIndex) {
         Collections.addAll(allFiles, folder.listFiles());
         for (File allFile : getAllFiles()) {
             try {
@@ -20,7 +20,7 @@ public class FileReader implements FileSaving {
         }
     }
 
-    private static void separate(File file, InvertedIndex invertedIndex) throws FileNotFoundException {
+    private static void separate(File file, HashInvertedIndex invertedIndex) throws FileNotFoundException {
         Scanner reader = new Scanner(file);
         while (reader.hasNextLine()) {
             String[] word = reader.nextLine().split("\\W+");
