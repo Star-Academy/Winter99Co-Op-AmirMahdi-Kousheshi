@@ -2,12 +2,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class FileReader implements FileSaving {
     static String path = "C:/Users/Amkam/Desktop/Folder";
     static File folder = new File(path);
-    public static ArrayList<File> allFiles = new ArrayList<>();
+    public static List<File> allFiles = new ArrayList<>();
 
     public static void addAllFiles(HashInvertedIndex invertedIndex) {
         Collections.addAll(allFiles, folder.listFiles());
@@ -30,7 +31,7 @@ public class FileReader implements FileSaving {
         }
     }
 
-    public static ArrayList<File> getAllFiles() {
+    public static List<File> getAllFiles() {
         return allFiles;
     }
 }

@@ -1,9 +1,10 @@
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class HashInvertedIndex implements StringSeparation, InvertedIndex {
-    public static HashMap<String, ArrayList<String>> wordLocations = new HashMap<>();
+    public static Map<String, ArrayList<String>> wordLocations = new HashMap<>();
 
     public HashInvertedIndex() {
 
