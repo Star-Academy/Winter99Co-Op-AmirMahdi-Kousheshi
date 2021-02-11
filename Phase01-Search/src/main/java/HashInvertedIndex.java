@@ -1,16 +1,38 @@
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class HashInvertedIndex implements StringSeparation, InvertedIndex {
     public static Map<String, ArrayList<String>> wordLocations = new HashMap<>();
 
     public HashInvertedIndex() {
-
+        this.initialiseSearch();
     }
 
-    public void addWord(String word, String docID) {
+    private void initialiseSearch() {
+        for (File allFile : FileReader.getAllFiles()) {
+            try {
+                this.readFromFile(allFile);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void readFromFile(File file) throws FileNotFoundException {
+        Scanner scanner = new Scanner(file);
+        while (scanner.hasNextLine()) {
+            String[] input = scanner.nextLine().split("\\W+");
+            for (String s : input) {
+                this.addWord(s, file.getName());
+            }
+        }
+    }
+
+    private void addWord(String word, String docID) {
         String normalizeWord = normalize(word);
         if (wordLocations.containsKey(normalizeWord.toLowerCase())) {
             if (!wordLocations.get(normalizeWord.toLowerCase()).contains(docID)) {
@@ -144,7 +166,8 @@ public class HashInvertedIndex implements StringSeparation, InvertedIndex {
             if (plusSignWordsDocs.size() != 0) {
                 return removeMinusWordsDocsFromFinalDocs(minusSignWordsDocs, secondFinalCheckCondition(plusSignWordsDocs, hashMap));
             } else {
-                return removeMinusWordsDocsFromFinalDocs(minusSignWordsDocs, (ArrayList<String>) hashMap.keySet());
+                ArrayList<String> hashMapKeySet = new ArrayList<>(hashMap.keySet());
+                return removeMinusWordsDocsFromFinalDocs(minusSignWordsDocs, hashMapKeySet);
             }
         }
     }

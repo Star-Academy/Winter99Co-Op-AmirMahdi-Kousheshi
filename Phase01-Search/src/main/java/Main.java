@@ -5,9 +5,8 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        FileReader.addAllFiles();
         invertedIndex = new HashInvertedIndex();
-        FileReader.addAllFiles(invertedIndex);
-
         while (true) {
             System.out.println("Enter your input:");
             String searchInput = scanner.nextLine();
