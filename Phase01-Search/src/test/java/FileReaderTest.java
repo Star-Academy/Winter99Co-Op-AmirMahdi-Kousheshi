@@ -11,7 +11,17 @@ public class FileReaderTest {
 
     @Test
     public void getAllFilesTest() {
-        FileReader.addAllFiles();
+        FileReader fileReader = new FileReader(new FileSaving() {
+            @Override
+            public void addAllFiles() {
+                Collections.addAll(allFiles, folder.listFiles());
+            }
+
+            @Override
+            public List<File> getAllFiles() {
+                return allFiles;
+            }
+        });
         String path = "C:/Users/Amkam/Desktop/Folder";
         File file = new File(path);
         ArrayList<File> allFiles = new ArrayList<>();

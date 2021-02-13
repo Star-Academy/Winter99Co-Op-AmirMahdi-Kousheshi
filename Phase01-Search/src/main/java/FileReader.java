@@ -5,16 +5,20 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class FileReader implements FileSaving {
-    static String path = "C:/Users/Amkam/Desktop/Folder";
-    static File folder = new File(path);
-    public static List<File> allFiles = new ArrayList<>();
+public class FileReader {
+    static FileSaving fileSaving;
 
-    public static void addAllFiles() {
-        Collections.addAll(allFiles, folder.listFiles());
+    public FileReader(FileSaving fileSaving) {
+        FileReader.fileSaving = fileSaving;
+        this.addAllFiles();
+    }
+
+    private void addAllFiles() {
+        fileSaving.addAllFiles();
     }
 
     public static List<File> getAllFiles() {
-        return allFiles;
+        return fileSaving.getAllFiles();
     }
+
 }
