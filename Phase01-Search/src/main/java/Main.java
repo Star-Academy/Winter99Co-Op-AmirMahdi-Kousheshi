@@ -1,7 +1,4 @@
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -9,39 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        FileReader fileReader = new FileReader(new FileSaving() {
-            @Override
-            public void addAllFiles() {
-                Collections.addAll(allFiles, folder.listFiles());
-            }
+        File file;
+        String path = checkAddress(scanner);
+        checkAddress(scanner);
 
-            @Override
-            public List<File> getAllFiles() {
-                return allFiles;
-            }
-        });
-        invertedIndex = new HashInvertedIndex(new StringSeparation() {
-            @Override
-            public String normalize(String word) {
-                return word.replaceAll("\\W+", "");
-            }
-
-            @Override
-            public ArrayList<String> findWordsFromInput(String[] splitInput, String regex) {
-                ArrayList<String> strings = new ArrayList<>();
-                for (String word : splitInput) {
-                    if (regex.equals("")) {
-                        strings.add(word);
-                    } else {
-                        if (word.startsWith(regex)) {
-                            strings.add(word.replace(regex, ""));
-                        }
-                    }
-                }
-                return strings;
-            }
-        });
-
+        invertedIndex = new HashInvertedIndex(new StringSeparatorImpl(), new FileSavingImpl(path));
         while (true) {
             System.out.println("Enter your input:");
             String searchInput = scanner.nextLine();
@@ -49,5 +18,18 @@ public class Main {
         }
     }
 
-
+    private static String checkAddress(Scanner scanner) {
+        String path;
+        File file;
+        while (true) {
+            System.out.println("address of files:");
+            path = scanner.nextLine();
+            file = new File(path);
+            if (!file.exists()) {
+                System.out.println("Incorrect address");
+            } else {
+                return path;
+            }
+        }
+    }
 }

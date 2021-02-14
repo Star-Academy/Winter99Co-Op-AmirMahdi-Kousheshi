@@ -6,32 +6,40 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class HashInvertedIndex implements InvertedIndex {
-    StringSeparation stringSeparation;
+    StringSeparator stringSeparator;
+    FileSaving fileSaving;
     private static Map<String, ArrayList<String>> wordLocations = new HashMap<>();
 
-    public HashInvertedIndex(StringSeparation stringSeparation) {
-        this.stringSeparation = stringSeparation;
-        this.initialiseSearch();
+    public HashInvertedIndex(StringSeparator stringSeparator, FileSaving fileSaving) {
+        this.fileSaving = fileSaving;
+        this.stringSeparator = stringSeparator;
+        initialiseFindingFiles();
+        this.initialiseReadingFiles();
     }
 
     public ArrayList<String> search(String searchInput) {
         String[] splitInput = searchInput.split(" ");
-        ArrayList<String> noSignWordsFinalDocIDs = new ArrayList<>
-                (checkSubscriptionForNoSignWords(stringSeparation.findWordsFromInput(splitInput, "")));
-
-        ArrayList<String> plusSignWordsFinalDocIDs = new ArrayList<>
-                (checkSubscriptionForSignWords(stringSeparation.findWordsFromInput(splitInput, "+")));
-
-        ArrayList<String> minusSignWordsFinalDocIDs = new ArrayList<>
-                (checkSubscriptionForSignWords(stringSeparation.findWordsFromInput(splitInput, "-")));
-
-        return finalCheck(noSignWordsFinalDocIDs, plusSignWordsFinalDocIDs, minusSignWordsFinalDocIDs, stringSeparation.findWordsFromInput(splitInput, "-"));
+        ArrayList<String> noSignWords = new ArrayList<>(stringSeparator.separateWordsBySign(splitInput, ""));
+        ArrayList<String> plusSignWords = new ArrayList<>(stringSeparator.separateWordsBySign(splitInput, "+"));
+        ArrayList<String> minusSignWords = new ArrayList<>(stringSeparator.separateWordsBySign(splitInput, "-"));
+        return initialiseSearch(noSignWords, plusSignWords, minusSignWords);
     }
 
-    private void initialiseSearch() {
-        for (File allFile : FileReader.getAllFiles()) {
+    private ArrayList<String> initialiseSearch(ArrayList<String> noSignWords, ArrayList<String> plusSignWords, ArrayList<String> minusSignWords) {
+        ArrayList<String> noSignWordDocs = new ArrayList<>(findDocsOfNoSignWords(noSignWords));
+        ArrayList<String> plusSignWordDocs = new ArrayList<>(findDocsOfSignWords(plusSignWords));
+        ArrayList<String> minusSignWordDocs = new ArrayList<>(findDocsOfSignWords(minusSignWords));
+        return findFinalDocs(noSignWordDocs, plusSignWordDocs, minusSignWordDocs, minusSignWords);
+    }
+
+    private void initialiseFindingFiles() {
+        fileSaving.addAllFiles();
+    }
+
+    private void initialiseReadingFiles() {
+        for (File file : fileSaving.getAllFiles()) {
             try {
-                this.readFromFile(allFile);
+                this.readFromFile(file);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -41,51 +49,59 @@ public class HashInvertedIndex implements InvertedIndex {
     private void readFromFile(File file) throws FileNotFoundException {
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
-            String[] input = scanner.nextLine().split("\\W+");
-            for (String s : input) {
-                this.addWord(s, file.getName());
-            }
+            initialiseAddWord(scanner, file);
+        }
+    }
+
+    private void initialiseAddWord(Scanner scanner, File file) {
+        String[] input = scanner.nextLine().split("\\W+");
+        for (String s : input) {
+            this.addWord(s, file.getName());
         }
     }
 
     private void addWord(String word, String docID) {
-        String normalizeWord = stringSeparation.normalize(word);
-        if (wordLocations.containsKey(normalizeWord.toLowerCase())) {
-            if (!wordLocations.get(normalizeWord.toLowerCase()).contains(docID)) {
-                wordLocations.get(normalizeWord.toLowerCase()).add(docID);
-            }
-        } else {
-            ArrayList<String> locations = new ArrayList<>();
+        String normalizeWord = stringSeparator.normalize(word).toLowerCase();
+        if (!wordLocations.containsKey(normalizeWord)) {
+            wordLocations.put(normalizeWord, new ArrayList<String>());
+        }
+        ArrayList<String> locations = wordLocations.get(normalizeWord);
+        if (!locations.contains(docID)) {
             locations.add(docID);
-            wordLocations.put(normalizeWord.toLowerCase(), locations);
         }
     }
 
-    private ArrayList<String> checkSubscriptionForNoSignWords(ArrayList<String> noSignWords) {
+    public ArrayList<String> findDocsOfAWord(String word) {
+        ArrayList<String> docIDs = new ArrayList<>();
+        if (wordLocations.containsKey(word.toLowerCase())) {
+            docIDs.addAll(wordLocations.get(word.toLowerCase()));
+        }
+        return docIDs;
+    }
+
+    private ArrayList<String> findDocsOfNoSignWords(ArrayList<String> noSignWords) {
         ArrayList<String> checker = new ArrayList<>();
         for (String nothingWord : noSignWords) {
-            if (findDoc(nothingWord).size() != 0) {
-                checker.addAll(findDoc(nothingWord));
+            if (findDocsOfAWord(nothingWord).size() != 0) {
+                checker.addAll(findDocsOfAWord(nothingWord));
                 break;
             }
         }
-        HashMap<String, Boolean> hashMap = subscriptionOfNoSignWords(checker, noSignWords);
-        checker.clear();
-        for (String s : hashMap.keySet()) {
-            if (hashMap.get(s)) {
-                checker.add(s);
+        HashMap<String, Boolean> hashMap = markSameDocsOfNoSignWords(checker, noSignWords);
+        ArrayList<String> docs = new ArrayList<>();
+        hashMap.keySet().forEach((doc) -> {
+            if (hashMap.get(doc)) {
+                docs.add(doc);
             }
-        }
-        return checker;
+        });
+        return docs;
     }
 
-    private HashMap<String, Boolean> subscriptionOfNoSignWords(ArrayList<String> checker, ArrayList<String> noSignWords) {
+    private HashMap<String, Boolean> markSameDocsOfNoSignWords(ArrayList<String> checker, ArrayList<String> noSignWords) {
         HashMap<String, Boolean> hashMap = new HashMap<>();
-        for (String s : checker) {
-            hashMap.put(s, false);
-        }
+        checker.forEach((doc) -> hashMap.put(doc, false));
         for (String nothingWord : noSignWords) {
-            for (String docID : findDoc(nothingWord)) {
+            for (String docID : findDocsOfAWord(nothingWord)) {
                 if (hashMap.containsKey(docID)) {
                     hashMap.put(docID, true);
                 }
@@ -94,96 +110,49 @@ public class HashInvertedIndex implements InvertedIndex {
         return hashMap;
     }
 
-    private ArrayList<String> checkSubscriptionForSignWords(ArrayList<String> SignWords) {
+    private ArrayList<String> findDocsOfSignWords(ArrayList<String> SignWords) {
         ArrayList<String> checker = new ArrayList<>();
         for (String word : SignWords) {
-            checker.addAll(findDoc(word));
+            checker.addAll(findDocsOfAWord(word));
         }
         return checker;
     }
 
-    private ArrayList<String> finalCheck(ArrayList<String> noSignWordsDocs, ArrayList<String> plusSignWordsDocs, ArrayList<String> minusSignWordsDocs, ArrayList<String> minusSignWords) {
-        if (noSignWordsDocs.size() != 0) {
-            return thirdFinalCheckCondition(plusSignWordsDocs, noSignWordsDocs, minusSignWordsDocs);
-        } else {
-            return firstFinalCheckCondition(plusSignWordsDocs, minusSignWordsDocs, minusSignWords);
-        }
-    }
-
-    private ArrayList<String> firstFinalCheckCondition(ArrayList<String> plusSignWordsDocs, ArrayList<String> minusSignWordsDocs, ArrayList<String> minusSignWords) {
+    private ArrayList<String> findFinalDocs(ArrayList<String> noSignWordsDocs, ArrayList<String> plusSignWordsDocs, ArrayList<String> minusSignWordsDocs, ArrayList<String> minusSignWords) {
         ArrayList<String> finalDocs = new ArrayList<>();
-        if (plusSignWordsDocs.size() == 0 && minusSignWordsDocs.size() == 0 && minusSignWords.size() == 0) {
+        ArrayList<String> signWordsDocs = new ArrayList<>(findFinalDocsOfSignWords(plusSignWordsDocs,minusSignWordsDocs,minusSignWords));
+        if (noSignWordsDocs.size() != 0) {
+            if (signWordsDocs.size() != 0) {
+                noSignWordsDocs.forEach((doc) -> {
+                    if (signWordsDocs.contains(doc)) {
+                        finalDocs.add(doc);
+                    }
+                });
+            } else {
+                finalDocs.addAll(noSignWordsDocs);
+            }
             return finalDocs;
         } else {
-            return checkNoneDocsFind(plusSignWordsDocs, minusSignWordsDocs, minusSignWords);
+            return signWordsDocs;
         }
     }
 
-    private ArrayList<String> checkNoneDocsFind(ArrayList<String> plusSignWordsDocs, ArrayList<String> minusSignWordsDocs, ArrayList<String> minusSignWords) {
-        ArrayList<String> finalDocs = new ArrayList<>();
-        if (minusSignWordsDocs.size() != 0 && plusSignWordsDocs.size() != 0) {
-            plusSignWordsDocs.removeAll(minusSignWordsDocs);
-            return plusSignWordsDocs;
-        } else if (plusSignWordsDocs.size() != 0) {
-            plusSignWordsDocs.removeAll(minusSignWordsDocs);
-            return plusSignWordsDocs;
+    private ArrayList<String> findFinalDocsOfSignWords(ArrayList<String> plusSignWordsDocs,
+                                                       ArrayList<String> minusSignWordsDocs, ArrayList<String> minusSignWords) {
+        ArrayList<String> docs = new ArrayList<>();
+        if (plusSignWordsDocs.size() != 0) {
+            docs.addAll(plusSignWordsDocs);
+            if (minusSignWords.size() != 0) {
+                fileSaving.getAllFiles().forEach((file) -> docs.add(file.getName()));
+                docs.removeAll(minusSignWordsDocs);
+            }
         } else {
             if (minusSignWords.size() != 0) {
-                FileReader.getAllFiles().forEach((file) -> finalDocs.add(file.getName()));
-                finalDocs.removeAll(minusSignWordsDocs);
+                fileSaving.getAllFiles().forEach((file) -> docs.add(file.getName()));
+                docs.removeAll(minusSignWordsDocs);
             }
-            return finalDocs;
         }
+        return docs;
     }
 
-    private ArrayList<String> secondFinalCheckCondition
-            (ArrayList<String> plusSignWordsDocs, HashMap<String, Boolean> hashMap) {
-        ArrayList<String> finalDocs = new ArrayList<>();
-        for (String plusSignWordsDoc : plusSignWordsDocs) {
-            if (hashMap.containsKey(plusSignWordsDoc)) {
-                hashMap.put(plusSignWordsDoc, true);
-            }
-        }
-        for (String s : hashMap.keySet()) {
-            if (hashMap.get(s)) {
-                finalDocs.add(s);
-            }
-        }
-        return finalDocs;
-    }
-
-    private ArrayList<String> thirdFinalCheckCondition(ArrayList<String> plusSignWordsDocs,
-                                                       ArrayList<String> noSignWordsDocs,
-                                                       ArrayList<String> minusSignWordsDocs) {
-        if (noSignWordsDocs.size() == 0) {
-            return removeMinusWordsDocsFromFinalDocs(minusSignWordsDocs, plusSignWordsDocs);
-        } else {
-            HashMap<String, Boolean> hashMap = new HashMap<>();
-            for (String noSignWordsDoc : noSignWordsDocs) {
-                hashMap.put(noSignWordsDoc, false);
-            }
-            if (plusSignWordsDocs.size() != 0) {
-                return removeMinusWordsDocsFromFinalDocs(minusSignWordsDocs, secondFinalCheckCondition(plusSignWordsDocs, hashMap));
-            } else {
-                ArrayList<String> hashMapKeySet = new ArrayList<>(hashMap.keySet());
-                return removeMinusWordsDocsFromFinalDocs(minusSignWordsDocs, hashMapKeySet);
-            }
-        }
-    }
-
-    private ArrayList<String> removeMinusWordsDocsFromFinalDocs
-            (ArrayList<String> minusSignWordsDocs, ArrayList<String> finalDocs) {
-        for (String minusSignWordsDoc : minusSignWordsDocs) {
-            finalDocs.remove(minusSignWordsDoc);
-        }
-        return finalDocs;
-    }
-
-    public ArrayList<String> findDoc(String word) {
-        ArrayList<String> docIDs = new ArrayList<>();
-        if (wordLocations.containsKey(word.toLowerCase())) {
-            docIDs.addAll(wordLocations.get(word.toLowerCase()));
-        }
-        return docIDs;
-    }
 }
