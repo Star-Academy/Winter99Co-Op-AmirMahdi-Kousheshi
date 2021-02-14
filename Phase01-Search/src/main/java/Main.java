@@ -6,9 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        File file;
         String path = checkAddress(scanner);
-        checkAddress(scanner);
 
         invertedIndex = new HashInvertedIndex(new StringSeparatorImpl(), new FileSavingImpl(path));
         while (true) {
@@ -18,7 +16,7 @@ public class Main {
         }
     }
 
-    private static String checkAddress(Scanner scanner) {
+    public static String checkAddress(Scanner scanner) {
         String path;
         File file;
         while (true) {

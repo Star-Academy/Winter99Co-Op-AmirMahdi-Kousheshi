@@ -120,7 +120,7 @@ public class HashInvertedIndex implements InvertedIndex {
 
     private ArrayList<String> findFinalDocs(ArrayList<String> noSignWordsDocs, ArrayList<String> plusSignWordsDocs, ArrayList<String> minusSignWordsDocs, ArrayList<String> minusSignWords) {
         ArrayList<String> finalDocs = new ArrayList<>();
-        ArrayList<String> signWordsDocs = new ArrayList<>(findFinalDocsOfSignWords(plusSignWordsDocs,minusSignWordsDocs,minusSignWords));
+        ArrayList<String> signWordsDocs = new ArrayList<>(findFinalDocsOfSignWords(plusSignWordsDocs, minusSignWordsDocs, minusSignWords));
         if (noSignWordsDocs.size() != 0) {
             if (signWordsDocs.size() != 0) {
                 noSignWordsDocs.forEach((doc) -> {
@@ -143,7 +143,6 @@ public class HashInvertedIndex implements InvertedIndex {
         if (plusSignWordsDocs.size() != 0) {
             docs.addAll(plusSignWordsDocs);
             if (minusSignWords.size() != 0) {
-                fileSaving.getAllFiles().forEach((file) -> docs.add(file.getName()));
                 docs.removeAll(minusSignWordsDocs);
             }
         } else {
