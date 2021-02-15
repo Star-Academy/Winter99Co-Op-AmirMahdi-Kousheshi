@@ -37,11 +37,4 @@ public class HashInvertedIndexTest {
         List<String> expectedValues = Arrays.asList("1.txt", "2.txt");
         Assert.assertEquals(expectedValues, hashInvertedIndex.search(searchInput));
     }
-
-    @Test
-    public void findDocsOfAWord() {
-        ArrayList<String> docs = new ArrayList<>();
-        docs.add("2.txt");
-        Assert.assertEquals(docs,hashInvertedIndex.findDocsOfAWord("disease"));
-    }
 }
