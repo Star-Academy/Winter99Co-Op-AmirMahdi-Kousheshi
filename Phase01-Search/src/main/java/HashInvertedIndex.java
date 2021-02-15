@@ -119,9 +119,9 @@ public class HashInvertedIndex implements InvertedIndex {
     }
 
     private ArrayList<String> findFinalDocs(ArrayList<String> noSignWordsDocs, ArrayList<String> plusSignWordsDocs, ArrayList<String> minusSignWordsDocs, ArrayList<String> minusSignWords) {
-        ArrayList<String> finalDocs = new ArrayList<>();
         ArrayList<String> signWordsDocs = new ArrayList<>(findFinalDocsOfSignWords(plusSignWordsDocs, minusSignWordsDocs, minusSignWords));
         if (noSignWordsDocs.size() != 0) {
+            ArrayList<String> finalDocs = new ArrayList<>();
             if (signWordsDocs.size() != 0) {
                 noSignWordsDocs.forEach((doc) -> {
                     if (signWordsDocs.contains(doc)) {

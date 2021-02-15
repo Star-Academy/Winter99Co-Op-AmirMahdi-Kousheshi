@@ -13,12 +13,12 @@ public class StringSeparatorImpl implements StringSeparator {
         for (String word : splitInput) {
             if (regex.equals("")) {
                 strings.add(word);
-            } else {
-                if (word.startsWith(regex)) {
-                    strings.add(word.replace(regex, ""));
-                }
+            } else if (word.startsWith(regex)) {
+                strings.add(word.replace(regex, ""));
             }
+
         }
         return strings;
     }
 }
+

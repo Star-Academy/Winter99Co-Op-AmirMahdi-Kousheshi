@@ -3,6 +3,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -35,5 +36,12 @@ public class HashInvertedIndexTest {
         String searchInput = "-ok";
         List<String> expectedValues = Arrays.asList("1.txt", "2.txt");
         Assert.assertEquals(expectedValues, hashInvertedIndex.search(searchInput));
+    }
+
+    @Test
+    public void findDocsOfAWord() {
+        ArrayList<String> docs = new ArrayList<>();
+        docs.add("2.txt");
+        Assert.assertEquals(docs,hashInvertedIndex.findDocsOfAWord("disease"));
     }
 }
