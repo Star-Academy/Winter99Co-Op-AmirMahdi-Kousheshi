@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "aKIYva/sPL7FttEdn20vYXWBlphxA1cmQC7H2Q+7nV9LuKUc2fSiTAjsePmwV5+SwdjWIeeJtZskmuuylCHkbg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Amkam\\Desktop\\ConsoleApp1\\ConsoleApp1\\Average.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Amkam\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
