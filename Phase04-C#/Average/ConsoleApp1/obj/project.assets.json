@@ -57,11 +57,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Amkam\\Desktop\\ConsoleApp1\\ConsoleApp1\\Average.csproj",
+      "projectUniqueName": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase04-C#\\Average\\ConsoleApp1\\Average.csproj",
       "projectName": "Average",
-      "projectPath": "C:\\Users\\Amkam\\Desktop\\ConsoleApp1\\ConsoleApp1\\Average.csproj",
+      "projectPath": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase04-C#\\Average\\ConsoleApp1\\Average.csproj",
       "packagesPath": "C:\\Users\\Amkam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Amkam\\Desktop\\ConsoleApp1\\ConsoleApp1\\obj\\",
+      "outputPath": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase04-C#\\Average\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Amkam\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Average
 {
-    class Student
+    public class Student
     {
         public static List<Student> AllStudents = new List<Student>();
         public Student(int studentNumber, string firstName, string lastName)
@@ -44,6 +44,7 @@ namespace Average
         public void AddToCourses(Course course)
         {
             this.Courses.Add(course);
+            this.CalculateAverage();
         }
 
         public static void AddCourseForStudent(int sudentID, Course course)
@@ -59,25 +60,19 @@ namespace Average
 
         public static List<Student> GetTopThreeStudents()
         {
-            CalculateAverage();
-            List<Student> ss = AllStudents.OrderBy(s => s.Average).ToList<Student>();
-            return ss;
-
+            return AllStudents.OrderBy(s => s.Average).ToList<Student>();
         }
 
-        private static void CalculateAverage()
+        private void CalculateAverage()
         {
-            foreach (var student in AllStudents)
+            float sum = 0;
+            int counter = 0;
+            foreach (var course in this.Courses)
             {
-                float sum = 0;
-                int counter = 0;
-                foreach (var course in student.Courses)
-                {
-                    sum += course.Score;
-                    counter++;
-                }
-                student.Average = (sum / counter);
+                sum += course.Score;
+                counter++;
             }
+            this.Average = (sum / counter);
         }
     }
 }

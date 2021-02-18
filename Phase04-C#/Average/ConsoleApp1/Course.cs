@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Average
 {
-    class Course
+    public class Course
     {
         public Course(int studentNumber, string lesson, float score)
         {
