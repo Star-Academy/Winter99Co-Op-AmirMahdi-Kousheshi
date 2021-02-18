@@ -7,7 +7,7 @@ namespace xunit_test
 {
     public class UnitTest1
     {
-        [Fact]
+       [Fact]
         public void TestStudentNumber()
         {
             Assert.Equal(1, new Student(1, "Amir", "Kouesheshi").StudentNumber);
@@ -48,7 +48,7 @@ namespace xunit_test
         public void TestTopStudents()
         {
             var student = new Student(4, "mmd", "mmdii");
-            new Course(4, "AP", (float)-1);
+            new Course(4, "AP", (float)15);
 
             new Student(5, "amir", "amiri");
             new Course(5, "AP", (float)19);

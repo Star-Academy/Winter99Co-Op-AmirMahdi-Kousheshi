@@ -12,12 +12,12 @@ namespace Average
         public static string path1 = "C://Users/Amkam/Desktop/Grades.json";
         static void Main(string[] args)
         {
-            var input = File.ReadAllText(path);
-            JsonConvert.DeserializeObject<List<Student>>(input);
-            var input1 = File.ReadAllText(path1);
-            JsonConvert.DeserializeObject<List<Course>>(input1);
+            var fileReader = new FileReaderImpl(path, path1);
+            fileReader.GetStudentsFromJsonFile();
+            fileReader.GetGradesFromJsonFile();
 
-            foreach(var student in Student.GetTopThreeStudents())
+
+            foreach (var student in Student.GetTopThreeStudents())
             {
                 Console.WriteLine(student.FirstName);
                 Console.WriteLine(student.LastName);
