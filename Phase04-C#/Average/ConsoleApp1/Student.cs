@@ -53,7 +53,7 @@ namespace Average
             student.AddToCourses(course);
         }
 
-        private static Student GetStudentByStudentNumber(int studentNumber)
+        public static Student GetStudentByStudentNumber(int studentNumber)
         {
             return AllStudents.Where(s => s.StudentNumber == studentNumber).First();
         }

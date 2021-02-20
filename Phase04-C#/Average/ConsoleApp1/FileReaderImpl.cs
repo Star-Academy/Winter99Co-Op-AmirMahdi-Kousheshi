@@ -20,14 +20,14 @@ namespace Average
 
         public List<Student> GetStudentsFromJsonFile()
         {
-            var input = File.ReadAllText(path);
-            return JsonConvert.DeserializeObject<List<Student>>(input);
-        }
+            var fileInput = File.ReadAllText(path);
+            return JsonConvert.DeserializeObject<List<Student>>(fileInput);
+        }   
 
         public List<Course> GetGradesFromJsonFile()
         {
-            var input1 = File.ReadAllText(path1);
-            return JsonConvert.DeserializeObject<List<Course>>(input1);
+            var fileInput = File.ReadAllText(path1);
+            return JsonConvert.DeserializeObject<List<Course>>(fileInput);
         }
     }
 }
