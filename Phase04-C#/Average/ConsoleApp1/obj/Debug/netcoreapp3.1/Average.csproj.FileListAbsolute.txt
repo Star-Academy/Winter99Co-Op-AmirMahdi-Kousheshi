@@ -13,3 +13,4 @@ C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase04-C#\Average\ConsoleApp1\obj\Debu
 C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.dll
 C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.pdb
 C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.genruntimeconfig.cache
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase04-C#\Average\ConsoleApp1\bin\Debug\netcoreapp3.1\ok.json

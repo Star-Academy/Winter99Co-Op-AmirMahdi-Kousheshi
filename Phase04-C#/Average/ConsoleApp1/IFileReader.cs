@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Average
 {
-    interface FileReader
+    interface IFileReader
     {
         string path { get; set; }
         string path1 { get; set; }

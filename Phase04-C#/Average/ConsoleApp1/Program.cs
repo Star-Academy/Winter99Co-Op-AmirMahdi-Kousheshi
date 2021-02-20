@@ -15,7 +15,7 @@ namespace Average
             var fileReader = new FileReaderImpl(path, path1);
             fileReader.GetStudentsFromJsonFile();
             fileReader.GetGradesFromJsonFile();
-
+            
 
             foreach (var student in Student.GetTopThreeStudents())
             {

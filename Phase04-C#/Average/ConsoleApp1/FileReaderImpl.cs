@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Average
 {
-    class FileReaderImpl : FileReader
+    class FileReaderImpl : IFileReader
     {
 
         public FileReaderImpl(string path, string path1)

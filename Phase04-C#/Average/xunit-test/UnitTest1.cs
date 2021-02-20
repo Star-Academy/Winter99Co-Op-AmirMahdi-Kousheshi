@@ -48,6 +48,19 @@ namespace xunit_test
         public void TestTopStudents()
         {
             var student = new Student(4, "mmd", "mmdii");
+            new Course(4, "AP", (float)-1);
+
+            new Student(5, "amir", "amiri");
+            new Course(5, "AP", (float)19);
+            new Course(5, "BP", (float)17);
+            List<Student> topStudents = Student.GetTopThreeStudents();
+            Assert.Equal(student, topStudents[0]);
+        }
+
+        [Fact]
+        public void TestCalculateAverage()
+        {
+            var student = new Student(4, "mmd", "mmdii");
             new Course(4, "AP", (float)15);
 
             new Student(5, "amir", "amiri");
