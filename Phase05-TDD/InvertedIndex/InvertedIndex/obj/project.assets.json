@@ -1,0 +1,90 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "InvertedIndex.Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/InvertedIndex.Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InvertedIndex.Library.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InvertedIndex.Library/1.0.0": {
+      "type": "project",
+      "path": "../InvertedIndex.Library/InvertedIndex.Library.csproj",
+      "msbuildProject": "../InvertedIndex.Library/InvertedIndex.Library.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "InvertedIndex.Library >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Amkam\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase05-TDD\\InvertedIndex\\InvertedIndex\\Project.csproj",
+      "projectName": "Project",
+      "projectPath": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase05-TDD\\InvertedIndex\\InvertedIndex\\Project.csproj",
+      "packagesPath": "C:\\Users\\Amkam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase05-TDD\\InvertedIndex\\InvertedIndex\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Amkam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {
+            "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj": {
+              "projectPath": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

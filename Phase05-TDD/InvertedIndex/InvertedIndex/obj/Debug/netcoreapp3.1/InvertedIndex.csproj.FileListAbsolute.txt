@@ -1,0 +1,13 @@
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\InvertedIndex.exe
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\InvertedIndex.deps.json
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\InvertedIndex.runtimeconfig.json
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\InvertedIndex.runtimeconfig.dev.json
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\InvertedIndex.dll
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\InvertedIndex.pdb
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\InvertedIndex.csprojAssemblyReference.cache
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\InvertedIndex.AssemblyInfoInputs.cache
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\InvertedIndex.AssemblyInfo.cs
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\InvertedIndex.csproj.CoreCompileInputs.cache
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\InvertedIndex.dll
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\InvertedIndex.pdb
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\InvertedIndex.genruntimeconfig.cache

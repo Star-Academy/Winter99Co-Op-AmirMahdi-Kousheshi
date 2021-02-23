@@ -1,0 +1,9 @@
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex.Library\bin\Debug\netstandard2.0\InvertedIndex.Library.deps.json
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex.Library\bin\Debug\netstandard2.0\InvertedIndex.Library.dll
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex.Library\bin\Debug\netstandard2.0\InvertedIndex.Library.pdb
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex.Library\obj\Debug\netstandard2.0\InvertedIndex.Library.AssemblyInfoInputs.cache
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex.Library\obj\Debug\netstandard2.0\InvertedIndex.Library.AssemblyInfo.cs
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex.Library\obj\Debug\netstandard2.0\InvertedIndex.Library.csproj.CoreCompileInputs.cache
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex.Library\obj\Debug\netstandard2.0\InvertedIndex.Library.dll
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex.Library\obj\Debug\netstandard2.0\InvertedIndex.Library.pdb
+C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex.Library\obj\Debug\netstandard2.0\InvertedIndex.Library.csprojAssemblyReference.cache
