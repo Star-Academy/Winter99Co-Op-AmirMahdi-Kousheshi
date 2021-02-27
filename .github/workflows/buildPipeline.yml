@@ -27,3 +27,9 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage"
       working-directory: Phase05-TDD\InvertedIndex
+    - name: Publish code coverage reports to codecove.io
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.5fd49cda-9430-4463-95be-083a80c1ef64 }}
+        files: ./**/coverage.cobertura.xml
+        fail_ci_if_error: true
