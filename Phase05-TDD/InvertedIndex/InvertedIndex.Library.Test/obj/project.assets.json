@@ -1666,14 +1666,14 @@
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
       },
-      "InvertedIndex.Library/1.0.0": {
+      "StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/InvertedIndex.Library.dll": {}
+          "bin/placeholder/StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex.dll": {}
         },
         "runtime": {
-          "bin/placeholder/InvertedIndex.Library.dll": {}
+          "bin/placeholder/StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex.dll": {}
         }
       }
     }
@@ -5669,7 +5669,7 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "InvertedIndex.Library/1.0.0": {
+    "StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex/1.0.0": {
       "type": "project",
       "path": "../InvertedIndex.Library/InvertedIndex.Library.csproj",
       "msbuildProject": "../InvertedIndex.Library/InvertedIndex.Library.csproj"
@@ -5677,8 +5677,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "InvertedIndex.Library >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.8.3",
+      "StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex >= 1.0.0",
       "coverlet.collector >= 1.3.0",
       "xunit >= 2.4.1",
       "xunit.runner.visualstudio >= 2.4.3"

@@ -2,20 +2,20 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "InvertedIndex.Library/1.0.0": {
+      "StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/InvertedIndex.Library.dll": {}
+          "bin/placeholder/StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex.dll": {}
         },
         "runtime": {
-          "bin/placeholder/InvertedIndex.Library.dll": {}
+          "bin/placeholder/StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "InvertedIndex.Library/1.0.0": {
+    "StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex/1.0.0": {
       "type": "project",
       "path": "../InvertedIndex.Library/InvertedIndex.Library.csproj",
       "msbuildProject": "../InvertedIndex.Library/InvertedIndex.Library.csproj"
@@ -23,7 +23,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "InvertedIndex.Library >= 1.0.0"
+      "StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex >= 1.0.0"
     ]
   },
   "packageFolders": {
