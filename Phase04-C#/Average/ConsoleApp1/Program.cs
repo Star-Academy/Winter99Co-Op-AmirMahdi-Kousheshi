@@ -8,8 +8,8 @@ namespace Average
 {
     class Program
     {
-        public static string path = "C://Users/Amkam/Desktop/Students.json";
-        public static string path1 = "C://Users/Amkam/Desktop/Grades.json";
+        public static string path = "../Source/Students.json";
+        public static string path1 = "..Source//Grades.json";
         static void Main(string[] args)
         {
             var fileReader = new FileReaderImpl(path, path1);
