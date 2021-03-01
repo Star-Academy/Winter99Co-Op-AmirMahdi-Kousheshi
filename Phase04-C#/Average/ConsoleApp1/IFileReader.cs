@@ -6,8 +6,8 @@ namespace Average
 {
     interface IFileReader
     {
-        string path { get; set; }
-        string path1 { get; set; }
+        string StudentsFilePath { get; set; }
+        string GradesFilepath { get; set; }
 
         List<Student> GetStudentsFromJsonFile();
 

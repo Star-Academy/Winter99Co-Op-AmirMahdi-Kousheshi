@@ -6,14 +6,25 @@ namespace Average
 {
     public class Student
     {
-        public static List<Student> AllStudents = new List<Student>();
+        static StudentController controller = new StudentController();
+
         public Student(int studentNumber, string firstName, string lastName)
         {
             StudentNumber = studentNumber;
             FirstName = firstName;
             LastName = lastName;
             this.Courses = new List<Course>();
-            AllStudents.Add(this);
+            controller.AddStudent(this);
+        }
+
+        public static void AddCourseForStudent(int studentNumber, Course course)
+        {
+            controller.AddCourseForStudent(studentNumber, course);
+        }
+
+        public static List<Student> GetTopThreeStudents()
+        {
+            return controller.GetTopThreeStudents();
         }
 
         public int StudentNumber
@@ -45,22 +56,6 @@ namespace Average
         {
             this.Courses.Add(course);
             this.CalculateAverage();
-        }
-
-        public static void AddCourseForStudent(int sudentID, Course course)
-        {
-            var student = GetStudentByStudentNumber(sudentID);
-            student.AddToCourses(course);
-        }
-
-        public static Student GetStudentByStudentNumber(int studentNumber)
-        {
-            return AllStudents.Where(s => s.StudentNumber == studentNumber).First();
-        }
-
-        public static List<Student> GetTopThreeStudents()
-        {
-            return AllStudents.OrderBy(s => s.Average).ToList<Student>();
         }
 
         private void CalculateAverage()
