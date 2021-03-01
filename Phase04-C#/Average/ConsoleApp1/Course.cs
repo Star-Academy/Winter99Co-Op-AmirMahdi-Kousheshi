@@ -11,7 +11,6 @@ namespace Average
             StudentNumber = studentNumber;
             Lesson = lesson;
             Score = score;
-            Student.AddCourseForStudent(studentNumber, this);
         }
 
         public int StudentNumber

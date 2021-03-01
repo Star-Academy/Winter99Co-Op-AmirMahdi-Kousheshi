@@ -6,7 +6,7 @@ namespace Average
 {
     public class Student
     {
-        static StudentController controller = new StudentController();
+       
 
         public Student(int studentNumber, string firstName, string lastName)
         {
@@ -14,17 +14,6 @@ namespace Average
             FirstName = firstName;
             LastName = lastName;
             this.Courses = new List<Course>();
-            controller.AddStudent(this);
-        }
-
-        public static void AddCourseForStudent(int studentNumber, Course course)
-        {
-            controller.AddCourseForStudent(studentNumber, course);
-        }
-
-        public static List<Student> GetTopThreeStudents()
-        {
-            return controller.GetTopThreeStudents();
         }
 
         public int StudentNumber

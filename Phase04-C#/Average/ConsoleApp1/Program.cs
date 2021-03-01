@@ -8,16 +8,20 @@ namespace Average
 {
     class Program
     {
-        public static string path = "../Source/Students.json";
-        public static string path1 = "..Source//Grades.json";
+        public static string StudentsJsonFileAddres = "../Source/Students.json";
+        public static string GradesJsonFileAddres = "..Source//Grades.json";
         static void Main(string[] args)
         {
-            var fileReader = new FileReaderImpl(path, path1);
-            fileReader.GetStudentsFromJsonFile();
-            fileReader.GetGradesFromJsonFile();
-            
+            var fileReader = new FileReaderImpl();
+            var students = fileReader.GetStudentsFromJsonFile(StudentsJsonFileAddres);
+            var grades = fileReader.GetGradesFromJsonFile(GradesJsonFileAddres);
 
-            foreach (var student in Student.GetTopThreeStudents())
+            var controller = new StudentController();
+            students.ForEach(student => controller.AddStudent(student));
+            grades.ForEach(course => controller.AddCourseForStudent(course));
+
+
+            foreach (var student in controller.GetTopThreeStudents())
             {
                 Console.WriteLine(student.FirstName);
                 Console.WriteLine(student.LastName);

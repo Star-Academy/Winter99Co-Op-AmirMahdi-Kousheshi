@@ -14,9 +14,9 @@ namespace Average
             this.AllStudents.Add(student);
         }
 
-        public void AddCourseForStudent(int sudentID, Course course)
+        public void AddCourseForStudent( Course course)
         {
-            var student = GetStudentByStudentNumber(sudentID);
+            var student = GetStudentByStudentNumber(course.StudentNumber);
             student.AddToCourses(course);
         }
 

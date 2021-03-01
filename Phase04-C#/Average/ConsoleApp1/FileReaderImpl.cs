@@ -9,24 +9,15 @@ namespace Average
     class FileReaderImpl : IFileReader
     {
 
-        public FileReaderImpl(string path, string path1)
+        public List<Student> GetStudentsFromJsonFile(string fildeAddres)
         {
-            this.path = path;
-            this.path1 = path1;
-        }
-
-        public string path { get; set; }
-        public string path1 { get; set; }
-
-        public List<Student> GetStudentsFromJsonFile()
-        {
-            var fileInput = File.ReadAllText(path);
+            var fileInput = File.ReadAllText(fildeAddres);
             return JsonConvert.DeserializeObject<List<Student>>(fileInput);
         }   
 
-        public List<Course> GetGradesFromJsonFile()
+        public List<Course> GetGradesFromJsonFile(string fildeAddres)
         {
-            var fileInput = File.ReadAllText(path1);
+            var fileInput = File.ReadAllText(fildeAddres);
             return JsonConvert.DeserializeObject<List<Course>>(fileInput);
         }
     }
