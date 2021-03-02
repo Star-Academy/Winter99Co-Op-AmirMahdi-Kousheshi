@@ -9,5 +9,8 @@
         <module name="Phase01-Search" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Phase01-Search" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
