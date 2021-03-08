@@ -20,5 +20,9 @@ jobs:
       uses: pozetroninc/github-action-get-latest-release@master
       with:
         repository: Star-Academy/Winter99Co-Op-AmirMahdi-Kousheshi
+    - name: Build library and generate NuGet Package
+      run: dotnet pack -c Release -o artifacts -p:PackageVersion=${{ steps.version.outputs.release }}
+      working-directory: Phase05-TDD/InvertedIndex/InvertedIndex.Library/InvertedIndex.Library.csproj
     - name: Publish NuGet Package
       run: dotnet nuget push ./**/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+
