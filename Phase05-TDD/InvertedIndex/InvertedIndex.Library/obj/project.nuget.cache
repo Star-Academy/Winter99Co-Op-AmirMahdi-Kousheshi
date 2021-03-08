@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "g6XYZPOaO+/a8b2/f9hA1p6lCtjBxI4+qkxT1/NQ4FDMpIHq8sXbfUHGBV5z0ldgWTYWzwghYp/KZ9+uc5VUjA==",
+=======
+  "dgSpecHash": "2RMl0QHO4ThTuRfPBZedPabirrr9ElZ2JfWjH/C3mivugK4NbxteA8CEdlPjLcmKQ+Q7ruhXxhWeIY4fx6XBEA==",
+>>>>>>> master
   "success": true,
   "projectFilePath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj",
   "expectedPackageFiles": [
