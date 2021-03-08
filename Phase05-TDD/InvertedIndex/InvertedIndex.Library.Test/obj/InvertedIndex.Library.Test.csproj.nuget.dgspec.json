@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library.Test\\InvertedIndex.Library.Test.csproj",
-        "projectName": "StarAcademy.Team21.Dutchman",
+        "projectName": "InvertedIndex.Library.Test",
         "projectPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library.Test\\InvertedIndex.Library.Test.csproj",
         "packagesPath": "C:\\Users\\Amkam\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library.Test\\obj\\",
@@ -18,15 +18,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
               "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj": {
                 "projectPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj"
@@ -41,18 +41,12 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.8.3, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -81,6 +75,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
@@ -89,7 +88,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj",
-        "projectName": "StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex",
+        "projectName": "StarAcademy.Team21.Dutchman",
         "projectPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj",
         "packagesPath": "C:\\Users\\Amkam\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\obj\\",
