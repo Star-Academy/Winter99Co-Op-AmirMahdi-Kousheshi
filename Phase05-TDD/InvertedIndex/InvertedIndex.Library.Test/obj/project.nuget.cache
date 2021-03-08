@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F1+B/Z9Cj+Xs+xQ0CZboKQZEiPFK2uhTErII0rzumn3CJpA8/79mSqYhTi0icpuLegxuMw7i03rZFoN7Ys3hhA==",
+  "dgSpecHash": "45ENAN/194Rr8Gibb3YR7plM5TjPrwjvYWa9zBKYvLZQze0Axf4SXoGV2i43z27oym55zGsSJcfZOkOgiiZkEQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library.Test\\InvertedIndex.Library.Test.csproj",
+  "projectFilePath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library.Test\\InvertedIndex.Library.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amkam\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\Amkam\\.nuget\\packages\\microsoft.codecoverage\\16.8.3\\microsoft.codecoverage.16.8.3.nupkg.sha512",
