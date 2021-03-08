@@ -7,14 +7,11 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "Project/1.0.0": {
-        "dependencies": {
-          "InvertedIndex.Library": "1.0.0"
-        },
         "runtime": {
           "Project.dll": {}
         }
       },
-      "InvertedIndex.Library/1.0.0": {
+      "StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex/1.0.0": {
         "runtime": {
           "InvertedIndex.Library.dll": {}
         }
@@ -27,7 +24,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "InvertedIndex.Library/1.0.0": {
+    "StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

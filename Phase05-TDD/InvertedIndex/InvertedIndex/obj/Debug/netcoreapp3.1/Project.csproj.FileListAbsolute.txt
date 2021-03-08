@@ -14,3 +14,19 @@ C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex
 C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\Project.dll
 C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\Project.pdb
 C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\Project.genruntimeconfig.cache
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\Project.exe
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\Project.deps.json
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\Project.runtimeconfig.json
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\Project.runtimeconfig.dev.json
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\Project.dll
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\Project.pdb
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\InvertedIndex.Library.dll
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\bin\Debug\netcoreapp3.1\InvertedIndex.Library.pdb
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\Project.csprojAssemblyReference.cache
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\Project.AssemblyInfoInputs.cache
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\Project.AssemblyInfo.cs
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\Project.csproj.CoreCompileInputs.cache
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\Project.csproj.CopyComplete
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\Project.dll
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\Project.pdb
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase05-TDD\InvertedIndex\InvertedIndex\obj\Debug\netcoreapp3.1\Project.genruntimeconfig.cache

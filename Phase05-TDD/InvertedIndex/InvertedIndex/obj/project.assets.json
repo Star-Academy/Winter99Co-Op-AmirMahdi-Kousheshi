@@ -2,20 +2,20 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex/1.0.0": {
+      "StarAcademy.Team21.Dutchman/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex.dll": {}
+          "bin/placeholder/StarAcademy.Team21.Dutchman.dll": {}
         },
         "runtime": {
-          "bin/placeholder/StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex.dll": {}
+          "bin/placeholder/StarAcademy.Team21.Dutchman.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex/1.0.0": {
+    "StarAcademy.Team21.Dutchman/1.0.0": {
       "type": "project",
       "path": "../InvertedIndex.Library/InvertedIndex.Library.csproj",
       "msbuildProject": "../InvertedIndex.Library/InvertedIndex.Library.csproj"
@@ -23,7 +23,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex >= 1.0.0"
+      "StarAcademy.Team21.Dutchman >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase05-TDD\\InvertedIndex\\InvertedIndex\\Project.csproj",
+      "projectUniqueName": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase05-TDD\\InvertedIndex\\InvertedIndex\\Project.csproj",
+      "projectPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex\\Project.csproj",
       "packagesPath": "C:\\Users\\Amkam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase05-TDD\\InvertedIndex\\InvertedIndex\\obj\\",
+      "outputPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Amkam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj": {
-              "projectPath": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj"
+            "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj": {
+              "projectPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5F/rg0BDw06Rv71lgvEwKcLimlezpvv6cIQrwAvbusfI++01+S4UuMcdXQVvcEEuUZtnXJtj64SRKX1+CFpBwQ==",
+  "dgSpecHash": "8IbXZ2WQlOBvv/IxkrIOFf6kpoOj+TXIhNCuimNrcRiddZzYRtrm/swq8E5f2ieO6B5eGYumy2sWl4AiRXZA8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase04-C#\\Average\\xunit-test\\xunit-test.csproj",
+  "projectFilePath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase04-C#\\Average\\xunit-test\\xunit-test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amkam\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\Amkam\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",

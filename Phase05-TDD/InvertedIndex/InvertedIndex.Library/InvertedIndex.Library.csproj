@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
-		<PackageId>StarAcademy.Team AmirMahdi Kousheshi.InvertedIndex</PackageId>
+		<PackageId>StarAcademy.Team21.Dutchman</PackageId>
 		<Authors>AmirMahdi Kousheshi</Authors>
 		<Company>Star Academy</Company>
 	</PropertyGroup>

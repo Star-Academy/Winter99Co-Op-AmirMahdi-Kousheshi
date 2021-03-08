@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qvt35iUjm1Ww+IrZfLurv2CBS264S0xS8p90V2CLmZINGOH+F1/G5dTi6d9gXlNG7uw0KDmUYDc74aHoCYbK+g==",
+  "dgSpecHash": "3OBGc7AgYBibnpIyvoYe+rf1+b8V/uegjhXE1kU6Qm+WvJcVFzh9ENcFWoI/f0nZ0o3oB7D006fAeqG9n0iFkA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase04-C#\\Average\\ConsoleApp1\\Average.csproj",
+  "projectFilePath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase04-C#\\Average\\ConsoleApp1\\Average.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amkam\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],

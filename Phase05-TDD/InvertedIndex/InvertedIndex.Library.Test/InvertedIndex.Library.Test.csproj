@@ -21,4 +21,11 @@
     <ProjectReference Include="..\InvertedIndex.Library\InvertedIndex.Library.csproj" />
   </ItemGroup>
 
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageId>StarAcademy.Team21.Dutchman</PackageId>
+		<Authors>AmirMahdi Kousheshi</Authors>
+		<Company>Star Academy</Company>
+	</PropertyGroup>
+
 </Project>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4iK46sGLzkc5AQSV7ElWDTvEu3JSgEvLNOpZfkQ597Go3f3LC/E+CmO0vMX+xNZ6rq82ym9ZAqTl/IGrAqoVGw==",
+  "dgSpecHash": "g6XYZPOaO+/a8b2/f9hA1p6lCtjBxI4+qkxT1/NQ4FDMpIHq8sXbfUHGBV5z0ldgWTYWzwghYp/KZ9+uc5VUjA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Amkam\\Desktop\\Mohaymen\\Projects\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj",
+  "projectFilePath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase05-TDD\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amkam\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Amkam\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

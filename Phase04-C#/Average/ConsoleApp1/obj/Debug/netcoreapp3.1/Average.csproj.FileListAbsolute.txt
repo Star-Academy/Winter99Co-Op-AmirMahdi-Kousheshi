@@ -13,3 +13,18 @@ C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase04-C#\Average\ConsoleApp1\obj\Debu
 C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.dll
 C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.pdb
 C:\Users\Amkam\Desktop\Mohaymen\Projects\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.genruntimeconfig.cache
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\bin\Debug\netcoreapp3.1\Average.exe
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\bin\Debug\netcoreapp3.1\Average.deps.json
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\bin\Debug\netcoreapp3.1\Average.runtimeconfig.json
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\bin\Debug\netcoreapp3.1\Average.runtimeconfig.dev.json
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\bin\Debug\netcoreapp3.1\Average.dll
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\bin\Debug\netcoreapp3.1\Average.pdb
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.csprojAssemblyReference.cache
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.AssemblyInfoInputs.cache
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.AssemblyInfo.cs
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.csproj.CoreCompileInputs.cache
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.csproj.CopyComplete
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.dll
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.pdb
+C:\Users\Amkam\Desktop\Star Academy\Winter99Co-Op-AmirMahdi-Kousheshi\Phase04-C#\Average\ConsoleApp1\obj\Debug\netcoreapp3.1\Average.genruntimeconfig.cache
