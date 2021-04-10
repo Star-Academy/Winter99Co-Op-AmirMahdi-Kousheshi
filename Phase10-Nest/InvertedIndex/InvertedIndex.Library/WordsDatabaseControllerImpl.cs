@@ -7,7 +7,12 @@ namespace InvertedIndex.Library
 {
     public class WordsDatabaseControllerImpl : IWordDatabaseController
     {
-        public Dictionary<string, List<string>> _WordLocations { get; set; }
+        public List<Word> AllWords { get; }
+
+        public WordsDatabaseControllerImpl()
+        {
+            this.AllWords = new List<Word>();
+        }
 
         public void InitialiseUpdateDatabase(List<string> allDocs)
         {
@@ -33,18 +38,33 @@ namespace InvertedIndex.Library
         {
             foreach (var word in words)
             {
-                _WordLocations.Add(word, new List<string>());
+                AllWords.Add(new Word(word));
             }
         }
 
-        public void AddDocForWordsInDatabase(string word, string docsName)
+        public void AddDocForWordsInDatabase(string wordName, string docName)
         {
-            _WordLocations[word].Add(docsName);
+            var word = GetWordByName(wordName);
+            if (AllWords.Contains(word))
+            {
+                if (!word.Docs.Contains(docName))
+                {
+                    word.AddDoc(docName);
+                }
+            }
         }
 
-        public Dictionary<string, List<string>> GetWordLocations()
+        public Word GetWordByName(string wordName)
         {
-            return _WordLocations;
+            foreach (var word in AllWords)
+            {
+                if (word.Name.Equals(wordName))
+                {
+                    return word;
+                }
+            }
+
+            return null;
         }
     }
 }
