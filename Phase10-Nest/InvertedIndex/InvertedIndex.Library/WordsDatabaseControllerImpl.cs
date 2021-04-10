@@ -18,7 +18,7 @@ namespace InvertedIndex.Library
         {
             foreach (var doc in allDocs)
             {
-                AddNormalizeWordsInADocToDictionary(GetWordsNormalizeFromAllTextInDoc(File.ReadAllText(doc)));
+                AddNormalizeWordsFromADocToList(GetWordsNormalizeFromAllTextInDoc(File.ReadAllText(doc)), doc);
             }
         }
 
@@ -34,17 +34,20 @@ namespace InvertedIndex.Library
             return normalizedWords;
         }
 
-        public void AddNormalizeWordsInADocToDictionary(List<string> words)
+        public void AddNormalizeWordsFromADocToList(List<string> words, string docName)
         {
             foreach (var word in words)
             {
-                AllWords.Add(new Word(word));
+                if (!AllWords.Contains(GetWordByName(word)))
+                {
+                    AllWords.Add(new Word(word));
+                }
+                AddDocForWordsInDatabase(GetWordByName(word), docName);
             }
         }
 
-        public void AddDocForWordsInDatabase(string wordName, string docName)
+        public void AddDocForWordsInDatabase(Word word, string docName)
         {
-            var word = GetWordByName(wordName);
             if (AllWords.Contains(word))
             {
                 if (!word.Docs.Contains(docName))

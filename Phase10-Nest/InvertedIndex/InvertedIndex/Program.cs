@@ -7,18 +7,16 @@ namespace Project
     {
         static void Main(string[] args)
         {
-            FilesDatabaseControllerImpl controller = new FilesDatabaseControllerImpl();
+            FilesDatabaseControllerImpl docsController = new FilesDatabaseControllerImpl();
             Console.WriteLine("Enter the directory name:");
-            controller.InitialiseReadAndSavingFiles(Console.ReadLine());
-            //
-            // while (true)
-            // {
-            //     Console.WriteLine("search input:");
-            //     foreach (var doc in search.InitialiseSearch(Console.ReadLine()))
-            //     {
-            //         Console.WriteLine(doc);
-            //     }
-            // }
+            docsController.InitialiseReadAndSavingFiles(Console.ReadLine());
+            var wordsController = new WordsDatabaseControllerImpl();
+            wordsController.InitialiseUpdateDatabase(docsController.GetAllDocs());
+            foreach (var word in wordsController.AllWords)
+            {
+                Console.WriteLine(word.Name);
+                Console.WriteLine(word.Docs.Count);
+            }
         }
     }
 }

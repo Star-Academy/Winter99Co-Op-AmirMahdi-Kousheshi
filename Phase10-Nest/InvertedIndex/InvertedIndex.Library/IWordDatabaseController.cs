@@ -9,8 +9,8 @@ namespace InvertedIndex.Library
 
         List<string> GetWordsNormalizeFromAllTextInDoc(string text);
 
-        void AddNormalizeWordsInADocToDictionary(List<string> words);
+        void AddNormalizeWordsFromADocToList(List<string> words, string docName);
 
-        void AddDocForWordsInDatabase(string word, string docsName);
+        void AddDocForWordsInDatabase(Word word, string docsName);
     }
 }

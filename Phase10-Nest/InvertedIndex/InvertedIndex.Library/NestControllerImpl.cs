@@ -13,5 +13,10 @@ namespace InvertedIndex.Library
             var client = new ElasticClient(connectionSetting);
             return client;
         }
+
+        public void SaveWordsInDatabase()
+        {
+            
+        }
     }
 }
