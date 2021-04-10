@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase010-Nest\\InvertedIndex\\InvertedIndex\\Project.csproj": {}
+    "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase10-Nest\\InvertedIndex\\InvertedIndex\\Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase010-Nest\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj": {
+    "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase10-Nest\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase010-Nest\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj",
+        "projectUniqueName": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase10-Nest\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj",
         "projectName": "StarAcademy.Team21.Dutchman",
-        "projectPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase010-Nest\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj",
+        "projectPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase10-Nest\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj",
         "packagesPath": "C:\\Users\\Amkam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase010-Nest\\InvertedIndex\\InvertedIndex.Library\\obj\\",
+        "outputPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase10-Nest\\InvertedIndex\\InvertedIndex.Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Amkam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase010-Nest\\InvertedIndex\\InvertedIndex\\Project.csproj": {
+    "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase10-Nest\\InvertedIndex\\InvertedIndex\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase010-Nest\\InvertedIndex\\InvertedIndex\\Project.csproj",
+        "projectUniqueName": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase10-Nest\\InvertedIndex\\InvertedIndex\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase010-Nest\\InvertedIndex\\InvertedIndex\\Project.csproj",
+        "projectPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase10-Nest\\InvertedIndex\\InvertedIndex\\Project.csproj",
         "packagesPath": "C:\\Users\\Amkam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase010-Nest\\InvertedIndex\\InvertedIndex\\obj\\",
+        "outputPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase10-Nest\\InvertedIndex\\InvertedIndex\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Amkam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,8 +89,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase010-Nest\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj": {
-                "projectPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase010-Nest\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj"
+              "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase10-Nest\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj": {
+                "projectPath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase10-Nest\\InvertedIndex\\InvertedIndex.Library\\InvertedIndex.Library.csproj"
               }
             }
           }

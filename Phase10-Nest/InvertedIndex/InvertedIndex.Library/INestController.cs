@@ -1,6 +1,6 @@
 ﻿namespace InvertedIndex.Library
 {
-    public class NestControllerImpl
+    public interface INestController
     {
         
     }
