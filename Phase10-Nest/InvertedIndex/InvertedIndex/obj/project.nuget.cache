@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "NRp/rfnQ9DjjkfG8BCPu59RQcnwzTm3bCUzAkC6pipV6+zijNSeS0Q2jm58vDpnH+IXaNn7zx85QtsesesuGkA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Amkam\\Desktop\\Star Academy\\Winter99Co-Op-AmirMahdi-Kousheshi\\Phase010-Nest\\InvertedIndex\\InvertedIndex\\Project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Amkam\\.nuget\\packages\\elasticsearch.net\\7.12.0\\elasticsearch.net.7.12.0.nupkg.sha512",
+    "C:\\Users\\Amkam\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
+    "C:\\Users\\Amkam\\.nuget\\packages\\nest\\7.12.0\\nest.7.12.0.nupkg.sha512",
+    "C:\\Users\\Amkam\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Amkam\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
+    "C:\\Users\\Amkam\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
